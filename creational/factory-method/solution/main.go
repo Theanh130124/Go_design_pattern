@@ -26,6 +26,7 @@ func (s Service) SendNotification(message string) {
 	s.notifier.Send(message)
 }
 
+// func bình thường tra ve Notifier
 func CreateNotifier(t string) Notifier {
 	if t == "sms" {
 		return SMSNotifier{}
