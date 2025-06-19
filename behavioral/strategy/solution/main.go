@@ -6,9 +6,11 @@ type Notifier interface { //interface là truyền gì cũng đc
 	Send(message string) // hàm send dùng chung
 }
 
+//Tạo thêm 1 structure mới và func tương ứng cho structure
+
 type EmailNotifier struct{}
 
-func (EmailNotifier) Send(message string) {
+func (EmailNotifier) Send(message string) { //Chỉ cần struct dùng đủ phương thức interface thì nó sẽ tự implement
 	fmt.Printf("Sending message: %s (Sender: Email)", message)
 }
 
